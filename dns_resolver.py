@@ -16,7 +16,7 @@ for line in vip_list:
 
     # Basic query
     try:
-        for rdata in dns.resolver.resolve(host, 'cname') :
+        for rdata in dns.resolver.resolve(host, 'a') :
             print(rdata)
     except dns.resolver.NXDOMAIN:
         print(host, "= nxdomain")
